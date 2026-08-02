@@ -1,0 +1,27 @@
+# Volt
+
+> Volt is a desktop app (Mac, Windows, Chrome) that supercharges WhatsApp for professionals and sales teams — voice-note transcription and summaries, message scheduling, keyboard-first navigation, workspaces, and personalized broadcasts. Message content stays under WhatsApp's end-to-end encryption and never passes through Volt's servers. Volt exposes an authenticated remote MCP server so AI agents can access WhatsApp contacts, chats, messages, groups, and lists.
+
+## Product
+- [Volt home](https://voltchat.com): Product overview and download.
+- [Documentation](https://voltchat.com/docs): End-user and integration docs.
+- [Pricing](https://voltchat.com/pricing): Free, Premium ($9.99/mo), Workspace ($79/mo, 3 seats), Workspace Pro ($239/mo, 5 seats).
+- [Blog](https://voltchat.com/blog): Product and company updates.
+- [Changelog](https://voltchat.com/changelog): Dated release notes (current v1.9.201).
+
+## Agent / MCP access
+- [MCP overview](https://voltchat.com/docs/mcp/overview): Connect AI models and agents to Volt.
+- [MCP setup](https://voltchat.com/docs/mcp/setup-instructions): OAuth custom connector or Bearer API key via mcp-remote.
+- [MCP FAQ](https://voltchat.com/docs/mcp/faq)
+- Remote MCP endpoint: https://mcp.voltchat.com/mcp (HTTP transport)
+- Tools: send-message, search-contact, list-chats, get-chat-messages, create-group, add-participants-to-group, remove-participants-from-group, promote-participants-to-admins, demote-participants-from-admins, get-own-identity, add-chat-to-lists, remove-chat-from-lists, get-chat-lists, get-chats-in-list, set-chat-read-state
+
+## Repo artifacts (API Evangelist)
+- MCP server manifest: mcp/volt-mcp.yml
+- Authentication profile: authentication/volt-authentication.yml
+- Changelog: changelog/volt-changelog.yml
+- Domain security: security/volt-domain-security.yml
+- Agent skills: skills/_index.yml
+
+## Notes
+- No public REST API or OpenAPI specification is published. The MCP server is the only programmatic surface.

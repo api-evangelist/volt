@@ -1,0 +1,31 @@
+generated: '2026-07-21'
+method: searched
+source: https://voltchat.com/docs/mcp/setup-instructions
+docs: https://voltchat.com/docs/mcp/setup-instructions
+note: >-
+  Volt publishes no public REST API/OpenAPI. Its only programmatic surface is the
+  authenticated remote MCP server (https://mcp.voltchat.com/mcp). Authentication
+  below is derived from the MCP setup docs, not an OpenAPI spec.
+summary:
+  types: [oauth2, http]
+  api_key_in: [header]
+  oauth2_flows: [authorizationCode]
+schemes:
+- name: OAuth Custom Connector
+  type: oauth2
+  applies_to: mcp.voltchat.com
+  description: >-
+    OAuth-based custom connector supported natively in Claude and ChatGPT — no
+    API key or config file required.
+  sources: [https://voltchat.com/docs/mcp/setup-instructions]
+- name: Volt API Key (Bearer)
+  type: http
+  scheme: bearer
+  in: header
+  parameter: Authorization
+  format: 'Authorization: Bearer YOUR_VOLT_API_KEY'
+  applies_to: mcp.voltchat.com
+  description: >-
+    Personal Volt API key sent as an HTTP Bearer token, used with the mcp-remote
+    module for MCP clients without native remote support.
+  sources: [https://voltchat.com/docs/mcp/setup-instructions]

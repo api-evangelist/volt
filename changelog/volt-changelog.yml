@@ -1,0 +1,48 @@
+generated: '2026-07-21'
+method: searched
+source: https://voltchat.com/changelog
+scheme: semver
+current_version: v1.9.201
+entries:
+- version: v1.9.201
+  date: '2026-06-29'
+  title: Workspace Chat Enhancements
+  highlights:
+  - Updated labels for workspace chats
+  - Chat recovery improvements
+  breaking: false
+- version: v1.9.197
+  date: '2026-06-24'
+  title: UI and Functionality Improvements
+  highlights:
+  - Onboarding experience stability fixes
+  - Contact renaming restricted to prevent confusion
+  breaking: false
+- version: v1.9.193
+  date: '2026-06-22'
+  title: Send Later Suggestions
+  highlights:
+  - Restored the Send Later suggestions top bar background
+  breaking: false
+- version: v1.9.190
+  date: '2026-06-19'
+  title: HubSpot Enhancements
+  highlights:
+  - Autolinking for HubSpot chats
+  - Permission flow updates for summaries
+  breaking: false
+- version: v1.9.189
+  date: '2026-06-19'
+  title: Workspace Functionality
+  highlights:
+  - HubSpot phone suggestion caching
+  - Workspace performance optimizations
+  breaking: false
+- version: v1.9.173
+  date: '2026-06-12'
+  title: Workspace Improvements
+  highlights:
+  - Membership syncing
+  - Connection reliability
+  - List creation enhancements
+  breaking: false

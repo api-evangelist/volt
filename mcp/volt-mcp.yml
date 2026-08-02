@@ -1,0 +1,73 @@
+generated: '2026-07-21'
+method: searched
+status: published
+source: https://voltchat.com/docs/mcp/overview
+docs:
+- https://voltchat.com/docs/mcp/overview
+- https://voltchat.com/docs/mcp/setup-instructions
+- https://voltchat.com/docs/mcp/faq
+server:
+  name: volt
+  title: Volt MCP Server
+  transport: http
+  url: https://mcp.voltchat.com/mcp
+  hosting: remote
+  summary: >-
+    Centrally hosted and managed remote MCP server that lets any compatible AI
+    model or agent access a user's Volt (WhatsApp) data — contacts, chats,
+    messages, groups and lists — following the authenticated remote MCP
+    specification. Requires the Volt desktop app with Volt Cloud connected.
+authentication:
+  methods:
+  - type: oauth2
+    description: >-
+      OAuth custom connector — available natively in Claude and ChatGPT without
+      an API key or config file.
+  - type: bearer
+    description: >-
+      API key passed as an Authorization Bearer header, used with the mcp-remote
+      module for clients lacking native remote MCP support.
+    header: 'Authorization: Bearer YOUR_VOLT_API_KEY'
+  prerequisites:
+  - Download the Volt desktop app
+  - Connect Volt Cloud before setup
+tool_count_documented: 16   # overview states 16 total; 15 are named in the overview list (captured below)
+clients:
+- name: Claude / Claude Desktop
+  native: true
+- name: ChatGPT
+  native: true
+- name: Cursor
+- name: Zed
+- name: mcp-remote (fallback for non-native clients)
+tools:
+- name: send-message
+  description: Send a WhatsApp message to a chat or contact.
+- name: search-contact
+  description: Search the user's WhatsApp contacts.
+- name: list-chats
+  description: List the user's WhatsApp chats.
+- name: get-chat-messages
+  description: Retrieve messages from a chat.
+- name: create-group
+  description: Create a new WhatsApp group.
+- name: add-participants-to-group
+  description: Add participants to a group.
+- name: remove-participants-from-group
+  description: Remove participants from a group.
+- name: promote-participants-to-admins
+  description: Promote group participants to admins.
+- name: demote-participants-from-admins
+  description: Demote group admins back to participants.
+- name: get-own-identity
+  description: Get the authenticated user's own WhatsApp identity.
+- name: add-chat-to-lists
+  description: Add a chat to one or more lists.
+- name: remove-chat-from-lists
+  description: Remove a chat from one or more lists.
+- name: get-chat-lists
+  description: Get the lists a chat belongs to.
+- name: get-chats-in-list
+  description: Get all chats in a given list.
+- name: set-chat-read-state
+  description: Set a chat's read/unread state.

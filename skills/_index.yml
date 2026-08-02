@@ -1,0 +1,15 @@
+generated: '2026-07-21'
+method: generated
+source: mcp/volt-mcp.yml
+note: >-
+  Grounded in the real, documented Volt MCP tool names (no OpenAPI exists);
+  each operation is a live MCP tool at https://mcp.voltchat.com/mcp.
+skills:
+- file: volt-send-whatsapp-message.md
+  name: Send a WhatsApp message via Volt
+  api: mcp/volt-mcp.yml
+  operations: [search-contact, list-chats, send-message, set-chat-read-state]
+- file: volt-manage-whatsapp-group.md
+  name: Create and manage a WhatsApp group via Volt
+  api: mcp/volt-mcp.yml
+  operations: [create-group, add-participants-to-group, promote-participants-to-admins, remove-participants-from-group, demote-participants-from-admins, search-contact]

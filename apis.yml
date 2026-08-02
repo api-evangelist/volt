@@ -1,8 +1,28 @@
 aid: volt
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/volt.png
 name: Volt
-description: Volt is a company surfaced as a portfolio company of 500-global, eqt-ventures, ivp and added
-  to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Volt is a desktop application (Mac, Windows, and Chrome) that supercharges
+  WhatsApp for professionals and sales teams — turning long voice notes into
+  readable transcripts and summaries, scheduling messages, adding keyboard-first
+  navigation, organizing chats into focused workspaces, and sending personalized
+  broadcasts. Message content stays under WhatsApp's end-to-end encryption and
+  never passes through Volt's own servers. For agents and AI models, Volt runs an
+  authenticated remote Model Context Protocol (MCP) server that exposes WhatsApp
+  contacts, chats, messages, groups, and lists as tools. Volt is backed by 500
+  Global, EQT Ventures, and IVP.
 url: https://raw.githubusercontent.com/api-evangelist/volt/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -14,10 +34,30 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
-apis: []
+- WhatsApp
+- Messaging
+- Productivity
+- MCP
+- AI Agents
+- Sales
+- Communication
+apis:
+- name: Volt MCP Server
+  description: >-
+    Authenticated remote MCP server that lets AI models and agents access a
+    user's Volt (WhatsApp) data — contacts, chats, messages, groups, and lists.
+  humanURL: https://voltchat.com/docs/mcp/overview
+  baseURL: https://mcp.voltchat.com/mcp
+  properties:
+  - type: MCPServer
+    url: mcp/volt-mcp.yml
+  - type: Authentication
+    url: authentication/volt-authentication.yml
+  - type: AgentSkill
+    url: skills/_index.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -26,3 +66,26 @@ maintainers:
 common:
 - type: Website
   url: https://voltchat.com
+- type: Documentation
+  url: https://voltchat.com/docs
+- type: Pricing
+  url: https://voltchat.com/pricing
+- type: Blog
+  url: https://voltchat.com/blog
+- type: ChangeLog
+  url: changelog/volt-changelog.yml
+- type: MCPServer
+  url: mcp/volt-mcp.yml
+- type: Authentication
+  url: authentication/volt-authentication.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: DomainSecurity
+  url: security/volt-domain-security.yml
+- type: LLMsTxt
+  url: llms/volt-llms.txt
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 6
+  pass: local-v1
