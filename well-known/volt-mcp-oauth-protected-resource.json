@@ -1,0 +1,1 @@
+{"resource":"https://mcp.voltchat.com/mcp","authorization_servers":["https://volt-api-proxy.prd.voltchat.com"],"scopes_supported":["mcp:read","mcp:write"],"bearer_methods_supported":["header"]}
